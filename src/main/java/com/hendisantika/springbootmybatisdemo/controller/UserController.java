@@ -60,4 +60,11 @@ public class UserController {
         userMapper.insert(user);
         return "redirect:/users";
     }
+
+    @GetMapping("{id}/edit")
+    public String getUserEdit(@PathVariable int id, Model model) {
+        User user = userMapper.select(id);
+        model.addAttribute("user", user);
+        return "users/edit";
+    }
 }
