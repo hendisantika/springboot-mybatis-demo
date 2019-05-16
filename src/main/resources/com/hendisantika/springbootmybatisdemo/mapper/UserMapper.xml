@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.mapper.UserMapper">
-    <select id="selectAll" resultType="com.example.demo.entity.User">
+<mapper namespace="com.hendisantika.springbootmybatisdemo.mapper.UserMapper">
+    <select id="selectAll" resultType="com.hendisantika.springbootmybatisdemo.entity.User">
         select * from user
     </select>
-    <select id="select" resultType="com.example.demo.entity.User">
+    <select id="select" resultType="com.hendisantika.springbootmybatisdemo.entity.User">
         select * from user where id = #{id}
     </select>
     <insert id="insert">
