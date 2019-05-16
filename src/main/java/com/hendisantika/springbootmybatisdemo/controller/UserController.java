@@ -67,4 +67,15 @@ public class UserController {
         model.addAttribute("user", user);
         return "users/edit";
     }
+
+    @PutMapping("{id}")
+    public String putUserEdit(@PathVariable int id, @ModelAttribute @Valid User user,
+                              BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "users/edit";
+        }
+        user.setId(id);
+        userMapper.update(user);
+        return "redirect:/users";
+    }
 }
