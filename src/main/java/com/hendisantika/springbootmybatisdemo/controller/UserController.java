@@ -78,4 +78,10 @@ public class UserController {
         userMapper.update(user);
         return "redirect:/users";
     }
+
+    @DeleteMapping("{id}")
+    public String deleteUser(@PathVariable int id, Model model) {
+        userMapper.delete(id);
+        return "redirect:/users";
+    }
 }
