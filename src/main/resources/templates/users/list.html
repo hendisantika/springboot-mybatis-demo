@@ -14,25 +14,25 @@
 <body>
 <div layout:fragment="contents">
     <div class="page-header">
-        <h1>ユーザー一覧</h1>
+        <h1>User list</h1>
     </div>
     <table class="table table-bordered table-hover table-striped">
         <tr>
-            <th class="info col-sm-2">ユーザーID</th>
-            <th class="info col-sm-2">ユーザー名</th>
+            <th class="info col-sm-2">User ID</th>
+            <th class="info col-sm-2">Username</th>
             <th class="info col-sm-2"></th>
         </tr>
         <tr th:each="user:${users}">
             <td th:text="${user.id}"></td>
             <td th:text="${user.name}"></td>
             <td>
-                <a class="btn btn-primary" th:href="@{'/users/' + ${user.id}}">詳細</a>
-                <a class="btn btn-primary" th:href="@{'/users/' + ${user.id} + '/edit'}">編集</a>
+                <a class="btn btn-primary" th:href="@{'/users/' + ${user.id}}">Details</a>
+                <a class="btn btn-primary" th:href="@{'/users/' + ${user.id} + '/edit'}">Edit</a>
             </td>
         </tr>
     </table>
-    <label class="text-info" th:text="${result}">結果表示</label><br/>
-    <a class="btn btn-primary" th:href="${'/users/new'}">新規作成</a>
+    <label class="text-info" th:text="${result}">Result representation</label><br/>
+    <a class="btn btn-primary" th:href="${'/users/new'}">Create New</a>
 </div>
 
 </body>

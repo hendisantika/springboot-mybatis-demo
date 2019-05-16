@@ -12,13 +12,13 @@
         <div class="col-sm-5">
             <div class="page-header">
                 <div>
-                    <h1>ユーザー新規作成</h1>
+                    <h1>Create new user</h1>
                 </div>
                 <form method="post" th:action="@{/users}" th:object="${user}">
 
                     <div th:include="users/form :: form_contents"></div>
 
-                    <button class="btn btn-primary btn-lg pull-right" name="update" type="submit">作成</button>
+                    <button class="btn btn-primary btn-lg pull-right" name="update" type="submit">Create</button>
                 </form>
             </div>
         </div>
