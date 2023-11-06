@@ -1,6 +1,7 @@
 package com.hendisantika.springbootmybatisdemo.entity;
 
-import javax.validation.constraints.NotBlank;
+
+import jakarta.validation.constraints.NotBlank;
 
 /**
  * Created by IntelliJ IDEA.

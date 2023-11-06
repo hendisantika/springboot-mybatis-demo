@@ -4,18 +4,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hendisantika.springbootmybatisdemo.mapper.UserMapper">
     <select id="selectAll" resultType="com.hendisantika.springbootmybatisdemo.entity.User">
-        select * from user
+        select *
+        from users
     </select>
     <select id="select" resultType="com.hendisantika.springbootmybatisdemo.entity.User">
-        select * from user where id = #{id}
+        select *
+        from users
+        where id = #{id}
     </select>
     <insert id="insert">
-        insert into user (name) values (#{name})
+        insert into users (name)
+        values (#{name})
     </insert>
     <update id="update">
-        update user set name = #{name} where id = #{id}
+        update users
+        set name = #{name}
+        where id = #{id}
     </update>
     <delete id="delete">
-        delete from user where id = #{id}
+        delete
+        from users
+        where id = #{id}
     </delete>
 </mapper>
